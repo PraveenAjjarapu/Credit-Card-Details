@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Interactive card details form</title>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="cards">
+      <div class="card1">
+        <div class="circles">
+          <div class="large"></div>
+          <div class="small"></div>
+        </div>
+        <div class="card-num"><span class="num">0000&nbsp0000&nbsp0000&nbsp0000</span></div>
+        <div class="details">
+          <p><span id="name">Praveen Ajjarapu</span></p>
+          <p><span id="month">00</span>/ <span id="year">00</span></p>
+        </div>
+        </img>
+      </div>
+      <div class="card2">
+        <div class="para-ill">
+          <img src="images/bg-card-back.png" alt="">
+          <p><span id="cvc">000</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="input" id="input">
+      <div class="forms" id="forms">
+        <form action="#" name="frm">
+          <div class="name">
+            <p class="p">Cardholder Name</p>
+            <input type="text" placeholder="e.g. Praveen Ajjarapu" name="holder" id="holder">
+            <div  class="hid notEnt" >
+              <p>Please fill your name</p>
+            </div>
+          </div>
+          <div class="no">
+            <p>Card Number</p>
+            <input type="number" maxlength="20" id="no" name="no" placeholder="e.g. 1234 5678 9123 0000" >
+            <div id="format" class="hid">
+              <p>Wrong format, numbers only</p>
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="dos">
+              <p class="p">Exp. Date (MM/YY)</p>
+              <div class="date">
+                <input type="number" maxlength="2" name="month" class="month" placeholder="MM" min="1" max="12">
+                <input type="number" maxlength="2" name="year" class="year" placeholder="YY" min="00" max="99">
+              </div>
+              <div id="blank1" class="hid">
+                <p>Can't be blank</p>
+              </div>
+            </div>
+            <div class="cvc">
+              <p class="p">CVC</p>
+              <input type="number" class="cvc" name="cvc" placeholder="e.g. 123" maxlength="3">
+              <div class="hid" id="blank2">
+                <p>Can't be blank</p>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="btn">
+          <button id="confirm">Confirm</button>
+        </div>
+      </div>
+
+
+      <!-- Completed state start -->
+      <div class="complete-state" id="verified">
+        <div class="tick">
+          <img src="images/icon-complete.svg" alt="">
+        </div>
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <div class="btn" id="again">
+          <button>Continue</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+  
+  
+  
+<script src="app.js"></script>
+</body>
+</html>
